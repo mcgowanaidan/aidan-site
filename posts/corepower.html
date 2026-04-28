@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CorePower, [solidcore], any form of Pilates – BAD! — Aidan McGowan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #111110; --ink-2: #555552; --ink-3: #999996;
+    --paper: #fafaf8; --paper-2: #f0f0ec; --accent: #c8502a;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 680px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--paper-2); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.85rem; font-weight: 400; color: var(--ink-2); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
 
+  .article-header {
+    max-width: calc(var(--max) + 4rem);
+    margin: 0 auto;
+    padding: 9rem 2.5rem 3rem;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .article-date {
+    font-size: 0.78rem;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+  }
+
+  .article-meta-divider {
+    width: 3px;
+    height: 3px;
+    background: var(--ink-3);
+    border-radius: 50%;
+  }
+
+  .article-header h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--ink);
+    animation: fadeUp 0.5s 0.1s both;
+  }
+
+  .article-body {
+    max-width: calc(var(--max) + 4rem);
+    margin: 0 auto;
+    padding: 0 2.5rem 6rem;
+  }
+
+  .article-divider {
+    border: none;
+    border-top: 1px solid var(--paper-2);
+    margin: 2.5rem 0;
+  }
+
+  .article-content p {
+    color: var(--ink-2);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.02rem;
+  }
+
+  .article-content p:last-child { margin-bottom: 0; }
+
+  .article-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--paper-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .back-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.15s;
+  }
+
+  .back-link:hover { color: var(--ink); }
+
+  footer { border-top: 1px solid var(--paper-2); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  footer span { font-size: 0.82rem; color: var(--ink-3); }
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer a { font-size: 0.82rem; color: var(--ink-3); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; }
+    .article-header { padding: 7rem 1.25rem 2.5rem; }
+    .article-body { padding: 0 1.25rem 4rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-name">Aidan McGowan</a>
+  <ul class="nav-links">
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../writing.html" class="active">Writing</a></li>
+    <li><a href="../speaking.html">Speaking</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="article-header">
+  <div class="article-meta">
+    <span class="article-tag">Sports</span>
+    <span class="article-meta-divider"></span>
+    <span class="article-date">March 2026</span>
+  </div>
+  <h1>CorePower, [solidcore], any form of Pilates – BAD!</h1>
+</div>
+
+<div class="article-body">
+  <hr class="article-divider">
+
+  <div class="article-content">
+    <p>I've been wanting to talk about this for a few weeks now, but I have (ironically) been too lazy. I was getting coffee with one of my female (sick) friends from high school and college the other day and she was telling me about how she's long felt that workout classes are bad for women. It's not a take I had heard before, so naturally, I was intrigued – especially given the take seemed anti-feminist coming from a known liberal on its surface. After not much discourse at all, I was convinced – workout classes are BAD for women, and in the next 700 words I am going to convince you the same.</p>
+
+    <p>This boils down to two main points – the social stigma surrounding women in the gym, and the tangible health benefits associated with the workout classes women choose to attend.</p>
+
+    <p>I'd imagine atop the list of reasons women attend workout classes rests that they are scared of male-dominated gym spaces and don't know what to do in the gym once they get there. Traditional weightlifting gyms are outnumbering women 3 to 1, so even normally confident girls attending these spaces are just avoiding them for two reasons. First, they don't know what to do when they get there and are embarrassed – there are few other women around who can help them or be their safety net. Second, without strong female support, even if they did know what to do, it can be nerve-racking to exercise with members of the opposite sex – no matter how good you are. It goes both ways – as a man, I can't go to a yoga class alone. Of course, I can, but I choose not to because I feel uncomfortable going to a female-dominated space and exercising. I'm not sure if they would agree with me, but it feels inappropriate; in my eyes, that's their space, who am I to interfere? So, what happens? These women enroll in gym memberships, go a few times, but can never really get their groove. They go less and less often, and then, their friend invites them to Barry's – and they are hooked.</p>
+
+    <p>Now, you're probably thinking – workout classes! Those are great! It's great exercise, there's a social piece, there's an identity around attending that gym via merchandise or conversation starters at the bar, and (most of all I'd argue) there is financial incentive. What could possibly be the downside?</p>
+
+    <p>I'll tell you what – these classes are bad in two ways. One, you're (very likely) not maximizing your strenuous output, and two, you're not strength training your entire body, rather just focusing on those muscle groups that improve your aesthetic.</p>
+
+    <p>First – in these workout classes, unless you have great discipline, you likely aren't pushing yourself to your maximum output. It's not like when you use a bench press with a spotter and you exert every last drop of energy into raising the bar on your last rep (and as we know, that's when muscle is really developed). Yoga classes, spin classes, HIIT classes – these are great as addendum workouts to improve cardiovascular health and build stamina and flexibility, but using them as primary exercise methods doesn't allow your body to break down muscle and build it back up the way true lifting does. They're enough to make you break a sweat, feel good about yourself, and take a post-exercise mirror selfie in the studio, but not enough to transform long-term strength, well-being, and longevity.</p>
+
+    <p>The second is that these classes are targeted at toning your body so you look aesthetically pleasing rather than promoting health. Something I hear women say a lot when it comes to their split days is "ass and abs" – that's great. But maybe we can work in a bench press or two? Maybe a bent-over row? Or other lower body exercises that work the whole leg – may I introduce to you the back squat? My friend was saying during our chat that women are more likely to get scoliosis when they're older because they don't lift weights during their formative years. Mixing in a weightlifting day once every week would surely reduce the long-term health issues women may suffer.</p>
+
+    <p>This probably sounds like I'm super anti-workout classes. I'm not. I've done them myself plenty of times, most notably boxing classes and some yoga here and there. But it is so clearly a supplement and not the meat and potatoes. Do as many workout classes as you want, but if you're not lifting weights, how are you going to push yourself off the floor when you're old and decrepit and fall down a flight of stairs? Will CorePower save you then?</p>
+  </div>
+
+  <div class="article-footer">
+    <a href="../writing.html" class="back-link">← Back to writing</a>
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 Aidan McGowan</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/aidan-mcgowan-656474179/">LinkedIn</a>
+    <a href="https://x.com/mcgowanaidan_?s=21">Twitter</a>
+    <a href="mailto:aidanmcgowan2@gmail.com">Email</a>
+  </div>
+</footer>
+</body>
+</html>
