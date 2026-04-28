@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing — Aidan McGowan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #111110; --ink-2: #555552; --ink-3: #999996;
+    --paper: #fafaf8; --paper-2: #f0f0ec; --accent: #c8502a;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 780px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--paper-2); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.85rem; font-weight: 400; color: var(--ink-2); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  .page-header { padding: 10rem 2.5rem 4rem; max-width: calc(var(--max) + 4rem); margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; }
+  .page-header h1 { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 4.5rem); letter-spacing: -0.03em; line-height: 1.05; color: var(--ink); animation: fadeUp 0.6s 0.1s both; }
+  .page-header h1 em { font-style: italic; color: var(--accent); }
+  .header-note { font-size: 0.9rem; color: var(--ink-3); max-width: 220px; text-align: right; line-height: 1.5; flex-shrink: 0; }
+
+  .writing-container {
+    max-width: calc(var(--max) + 4rem);
+    margin: 0 auto;
+    padding: 0 2.5rem 6rem;
+  }
+
+  .filter-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border: 1px solid var(--paper-2);
+    background: transparent;
+    color: var(--ink-3);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: var(--sans);
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .writing-list { display: flex; flex-direction: column; }
+
+  .writing-item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 2rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--paper-2);
+    text-decoration: none;
+    color: inherit;
+    align-items: start;
+    transition: background 0.1s;
+  }
+
+  .writing-item:first-child { border-top: 1px solid var(--paper-2); }
+
+  .writing-item:hover .writing-title { color: var(--accent); }
+
+  .writing-date {
+    font-size: 0.8rem;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+    padding-top: 0.2rem;
+  }
+
+  .writing-content { }
+
+  .writing-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+    transition: color 0.15s;
+  }
+
+  .writing-excerpt {
+    font-size: 0.9rem;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+
+  .writing-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: var(--paper-2);
+    padding: 3px 9px;
+    white-space: nowrap;
+    align-self: start;
+    margin-top: 0.2rem;
+  }
+
+  footer { border-top: 1px solid var(--paper-2); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  footer span { font-size: 0.82rem; color: var(--ink-3); }
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer a { font-size: 0.82rem; color: var(--ink-3); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; }
+    .page-header { flex-direction: column; align-items: flex-start; padding: 7rem 1.25rem 3rem; }
+    .header-note { text-align: left; }
+    .writing-container { padding: 0 1.25rem 4rem; }
+    .writing-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    .writing-tag { align-self: auto; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-name">Aidan McGowan</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="writing.html" class="active">Writing</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>Writing &amp;<br><em>essays</em></h1>
+  <p class="header-note">Occasional writing on topics I'm thinking about.</p>
+</div>
+
+<div class="writing-container">
+  <div class="filter-bar">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Essays</button>
+    <button class="filter-btn">Commentary</button>
+    <button class="filter-btn">Notes</button>
+  </div>
+
+  <div class="writing-list">
+
+    <a href="#" class="writing-item">
+      <span class="writing-date">Jun 2025</span>
+      <div class="writing-content">
+        <h3 class="writing-title">The first piece title goes here</h3>
+        <p class="writing-excerpt">A sentence or two summarising what this piece is about and why it's worth reading. Give the reader enough to decide.</p>
+      </div>
+      <span class="writing-tag">Essay</span>
+    </a>
+
+    <a href="#" class="writing-item">
+      <span class="writing-date">Apr 2025</span>
+      <div class="writing-content">
+        <h3 class="writing-title">Another piece worth reading</h3>
+        <p class="writing-excerpt">A sentence or two summarising what this piece is about and why it's worth reading. Give the reader enough to decide.</p>
+      </div>
+      <span class="writing-tag">Commentary</span>
+    </a>
+
+    <a href="#" class="writing-item">
+      <span class="writing-date">Feb 2025</span>
+      <div class="writing-content">
+        <h3 class="writing-title">A third piece on something important</h3>
+        <p class="writing-excerpt">A sentence or two summarising what this piece is about and why it's worth reading. Give the reader enough to decide.</p>
+      </div>
+      <span class="writing-tag">Essay</span>
+    </a>
+
+    <a href="#" class="writing-item">
+      <span class="writing-date">Jan 2025</span>
+      <div class="writing-content">
+        <h3 class="writing-title">Something you found yourself thinking about</h3>
+        <p class="writing-excerpt">A sentence or two summarising what this piece is about and why it's worth reading. Give the reader enough to decide.</p>
+      </div>
+      <span class="writing-tag">Notes</span>
+    </a>
+
+    <a href="#" class="writing-item">
+      <span class="writing-date">Nov 2024</span>
+      <div class="writing-content">
+        <h3 class="writing-title">An older piece that still holds up</h3>
+        <p class="writing-excerpt">A sentence or two summarising what this piece is about and why it's worth reading. Give the reader enough to decide.</p>
+      </div>
+      <span class="writing-tag">Essay</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 Aidan McGowan</span>
+  <div class="footer-links">
+    <a href="https://linkedin.com">LinkedIn</a>
+    <a href="https://twitter.com">Twitter</a>
+    <a href="mailto:aidan@example.com">Email</a>
+  </div>
+</footer>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

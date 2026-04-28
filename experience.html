@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Aidan McGowan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #111110; --ink-2: #555552; --ink-3: #999996;
+    --paper: #fafaf8; --paper-2: #f0f0ec; --accent: #c8502a;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 780px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--paper-2); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.85rem; font-weight: 400; color: var(--ink-2); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  .page-header { padding: 10rem 2.5rem 5rem; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  .page-header h1 { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 4.5rem); letter-spacing: -0.03em; line-height: 1.05; color: var(--ink); animation: fadeUp 0.6s 0.1s both; }
+  .page-header h1 em { font-style: italic; color: var(--accent); }
+
+  .exp-container {
+    max-width: calc(var(--max) + 4rem);
+    margin: 0 auto;
+    padding: 0 2.5rem 6rem;
+  }
+
+  .exp-section-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--paper-2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .exp-group { margin-bottom: 5rem; }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--paper-2);
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  .exp-meta {
+    padding-top: 0.15rem;
+  }
+
+  .exp-date {
+    font-size: 0.8rem;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  .exp-org {
+    font-size: 0.85rem;
+    color: var(--ink-3);
+    margin-top: 0.25rem;
+  }
+
+  .exp-body h3 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  .exp-body p {
+    font-size: 0.95rem;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .exp-body p:last-child { margin-bottom: 0; }
+
+  .exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: var(--paper-2);
+    padding: 3px 10px;
+  }
+
+  footer { border-top: 1px solid var(--paper-2); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  footer span { font-size: 0.82rem; color: var(--ink-3); }
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer a { font-size: 0.82rem; color: var(--ink-3); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; }
+    .page-header { padding: 7rem 1.25rem 3rem; }
+    .exp-container { padding: 0 1.25rem 4rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-name">Aidan McGowan</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html" class="active">Experience</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>Work &amp; <em>experience</em></h1>
+</div>
+
+<div class="exp-container">
+
+  <div class="exp-group">
+    <p class="exp-section-title">Current</p>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Sep 2023 – Present</p>
+        <p class="exp-org">Olsen Palmer LLC</p>
+        <p class="exp-org">Washington, D.C.</p>
+      </div>
+      <div class="exp-body">
+        <h3>Investment Banking Analyst</h3>
+        <p>Depositories coverage with a focus on community banking M&amp;A across the southeast and central United States. Sole analyst responsible for all marketing materials production including webinars, banking conferences, and special alerts. Directly responsible for training one full-time analyst and three interns.</p>
+        <p>Select closed transactions include the $25MM sale of Johnson County Bank to Skyline Bankshares (OTCQX: SLBK), sale of New Millennium Bankshares to Berco Inc., sale of Bancshares of Ripley to Security Bancshares, and sale of First Minnetonka Bancorporation to Bridgewater Bancshares (NASDAQCM: BWB). Work spans fairness opinions, ability-to-pay analysis, valuation, proxy inserts, CIM production, and due diligence management.</p>
+        <div class="exp-tags">
+          <span class="tag">M&amp;A Advisory</span>
+          <span class="tag">Community Banking</span>
+          <span class="tag">Fairness Opinions</span>
+          <span class="tag">Valuation</span>
+          <span class="tag">Depositories</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-group">
+    <p class="exp-section-title">Previous</p>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Summer 2022</p>
+        <p class="exp-org">Olsen Palmer LLC</p>
+        <p class="exp-org">Washington, D.C.</p>
+      </div>
+      <div class="exp-body">
+        <h3>Summer Analyst</h3>
+        <p>Summer internship on the depositories coverage team prior to returning full-time in 2023.</p>
+        <div class="exp-tags">
+          <span class="tag">Investment Banking</span>
+          <span class="tag">M&amp;A</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Aug – Dec 2021</p>
+        <p class="exp-org">WRS Political</p>
+        <p class="exp-org">Charlottesville, VA</p>
+      </div>
+      <div class="exp-body">
+        <h3>Campaign Finance Intern</h3>
+        <p>Political consulting firm specialising in local, gubernatorial, and senatorial elections. Analysed county-level voting data from the 2016 and 2020 cycles to design voter targeting strategy. Prepared 20+ responses and talking points for a candidate's appearance on national programming, including work on the U.S. House race in Georgia's 6th Congressional District.</p>
+        <div class="exp-tags">
+          <span class="tag">Political Consulting</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Campaign Strategy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-group">
+    <p class="exp-section-title">Education</p>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Aug 2019 – May 2023</p>
+        <p class="exp-org">University of Virginia</p>
+        <p class="exp-org">College of Arts &amp; Sciences</p>
+      </div>
+      <div class="exp-body">
+        <h3>B.A. Economics &amp; Government</h3>
+        <p>Coursework in Corporate Finance, Financial Accounting, Econometrics, Micro/Macroeconomics, and Real Estate Finance. VP of Finance, Delta Upsilon Fraternity. Editorial Board, The Jefferson Independent.</p>
+        <div class="exp-tags">
+          <span class="tag">Economics</span>
+          <span class="tag">Government</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-group">
+    <p class="exp-section-title">Licenses, Skills &amp; Recognition</p>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Licenses</p>
+      </div>
+      <div class="exp-body">
+        <h3>FINRA Series 79 · Series 63 · SIE</h3>
+        <div class="exp-tags">
+          <span class="tag">Series 79</span>
+          <span class="tag">Series 63</span>
+          <span class="tag">SIE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Tools</p>
+      </div>
+      <div class="exp-body">
+        <h3>S&amp;P Capital IQ Pro · Salesforce · Stata</h3>
+        <p>Intermediate Spanish.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Awards</p>
+      </div>
+      <div class="exp-body">
+        <h3>Best Feature Writing — Intercollegiate Studies Institute (2022)</h3>
+        <p>Eagle Scout, Boy Scouts of America (2018).</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Aidan McGowan</span>
+  <div class="footer-links">
+    <a href="https://linkedin.com">LinkedIn</a>
+    <a href="https://twitter.com">Twitter</a>
+    <a href="mailto:aidan@example.com">Email</a>
+  </div>
+</footer>
+</body>
+</html>
