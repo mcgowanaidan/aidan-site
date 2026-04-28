@@ -224,7 +224,20 @@
     line-height: 1.55;
   }
 
-  /* ANIMATIONS */
+  .hero-photo {
+    position: absolute;
+    top: 0; right: 0;
+    width: 42%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0;
+    animation: fadeIn 0.8s 0.4s forwards;
+  }
+
+  @media (max-width: 600px) {
+    .hero-photo { display: none; }
+  }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -289,6 +302,7 @@
 </nav>
 
 <main style="position: relative;">
+  <img src="Professional_Headshot.jpg" alt="Aidan McGowan" class="hero-photo">
   <div class="hero">
     <p class="hero-label">Aidan McGowan</p>
     <h1>Ideas,<br><em>work,</em><br>and writing.</h1>
@@ -300,25 +314,15 @@
   <section>
     <p class="section-label">Recent writing</p>
     <div class="writing-grid">
-      <a href="writing.html" class="writing-card">
-        <p class="writing-card-date">June 2025</p>
-        <h3>The first piece title goes here</h3>
-        <p>A short excerpt or description of what this piece is about — one or two sentences.</p>
+      <a href="posts/corepower.html" class="writing-card">
+        <p class="writing-card-date">March 2026</p>
+        <h3>CorePower, [solidcore], any form of Pilates – BAD!</h3>
+        <p>I've been wanting to talk about this for a few weeks now, but I have (ironically) been too lazy...</p>
       </a>
       <a href="writing.html" class="writing-card">
-        <p class="writing-card-date">April 2025</p>
-        <h3>Another piece worth reading</h3>
-        <p>A short excerpt or description of what this piece is about — one or two sentences.</p>
-      </a>
-      <a href="writing.html" class="writing-card">
-        <p class="writing-card-date">February 2025</p>
-        <h3>A third piece on something important</h3>
-        <p>A short excerpt or description of what this piece is about — one or two sentences.</p>
-      </a>
-      <a href="writing.html" class="writing-card">
-        <p class="writing-card-date">January 2025</p>
-        <h3>Something you found yourself thinking about</h3>
-        <p>A short excerpt or description of what this piece is about — one or two sentences.</p>
+        <p class="writing-card-date">Coming soon</p>
+        <h3>More pieces on the way</h3>
+        <p>Check back soon.</p>
       </a>
     </div>
   </section>
