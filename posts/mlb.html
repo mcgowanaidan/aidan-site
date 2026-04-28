@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLB is the #2 Sport in America — Aidan McGowan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #111110; --ink-2: #555552; --ink-3: #999996;
+    --paper: #fafaf8; --paper-2: #f0f0ec; --accent: #c8502a;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 680px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--paper-2); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.85rem; font-weight: 400; color: var(--ink-2); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  .article-header { max-width: calc(var(--max) + 4rem); margin: 0 auto; padding: 9rem 2.5rem 3rem; }
+  .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .article-tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .article-date { font-size: 0.78rem; color: var(--ink-3); letter-spacing: 0.04em; }
+  .article-meta-divider { width: 3px; height: 3px; background: var(--ink-3); border-radius: 50%; }
+  .article-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -0.03em; line-height: 1.1; color: var(--ink); animation: fadeUp 0.5s 0.1s both; }
+
+  .article-body { max-width: calc(var(--max) + 4rem); margin: 0 auto; padding: 0 2.5rem 6rem; }
+  .article-divider { border: none; border-top: 1px solid var(--paper-2); margin: 2.5rem 0; }
+  .article-content p { color: var(--ink-2); margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.02rem; }
+  .article-content p:last-child { margin-bottom: 0; }
+
+  .article-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--paper-2); display: flex; justify-content: space-between; align-items: center; }
+  .back-link { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.15s; }
+  .back-link:hover { color: var(--ink); }
+
+  footer { border-top: 1px solid var(--paper-2); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  footer span { font-size: 0.82rem; color: var(--ink-3); }
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer a { font-size: 0.82rem; color: var(--ink-3); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; }
+    .article-header { padding: 7rem 1.25rem 2.5rem; }
+    .article-body { padding: 0 1.25rem 4rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-name">Aidan McGowan</a>
+  <ul class="nav-links">
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../writing.html" class="active">Writing</a></li>
+    <li><a href="../speaking.html">Speaking</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="article-header">
+  <div class="article-meta">
+    <span class="article-tag">Sports</span>
+    <span class="article-meta-divider"></span>
+    <span class="article-date">April 2025</span>
+  </div>
+  <h1>MLB is the #2 Sport in America</h1>
+</div>
+
+<div class="article-body">
+  <hr class="article-divider">
+
+  <div class="article-content">
+    <p>Just like everyone else in sports media since October 2024, I too have taken great pleasure in the continued demise of the NBA and castigating its "product" every chance I get. We need not delve into why it's so bad – every man I know would rather watch a Colts-Jaguars Thursday night football game when both teams are mathematically eliminated from playoff contention (so, like week 3) than watch the Bucks play the Knicks for sole possession of 1st place in the east on a Wednesday in February. There are countless reasons why – and yet, many still argue that the NBA is the second most popular league in the United States. Are they right?</p>
+
+    <p>Of course not. While Instagram followers and TV deals with ESPN may give the façade that the NBA is the preeminent non-NFL sports league, the eye test and the media will staunchly disagree. The NBA, simply, sucks. And while the NHL put on an all-out performance with the 4 Nations Tournament these past several days, this (albeit awesome) event has caused many a sports fan to fall victim to recency bias – and exalt the NHL to the second most popular league in the country. Whether it is recency bias, or maybe just an outright hatred / dissatisfaction with the NBA, these folks too, are wrong. What these ball haters fail to realize is that America's Pastime, the congregation of seam-heads, the Major League Baseball, is the #2 sport in America, and it is here to stay.</p>
+
+    <p>I got in an argument with my roommate yesterday about the MLB's appeal – how they need to branch out to other audiences, and how they need to make the game more marketable. He, of course, was wrong. The league does not need to branch out to younger audiences – the whole point is that it is for older audiences – and here's why that will never become a problem.</p>
+
+    <p>Baseball has always appealed to an older audience, and it is like that by design. The argument that these fans are going to die out holds no water – the original fans of baseball would've been dying out in the 1880s (as the game was invented 200 years ago) and the sport is more popular now than it ever has been. Baseball doesn't go out of its way to appeal to older people; older people naturally draw toward baseball as it is the natural order of life. Baseball games have a retirement-like activity vibe that other sports simply lack.</p>
+
+    <p>First – Baseball games have a tame environment – you can go there just to hangout with your wife (or friends) and relax while watching sports. Can the average 65-year-old attend an Eagles game "casually"?</p>
+
+    <p>Second – They last a long time, but there is a consistent pace of play that is both not too busy but not too slow. Grandpa Joe can head to the park for 3 hours, talk shop with the folks around him and catch a pitch every 20 seconds. He likely only has to pay attention for one second after that, and if he misses it, so what! There will be another pitch momentarily. Basketball and hockey move far too fast, and football requires far too much diligence.</p>
+
+    <p>Third – The frequency of games is perfect for someone who is either retired or has worked long enough at his company that no one will mind if he ducks out for the 7pm game. People at this age don't have a ton going on – they go to work, make dinner, and wait for their kids to have grandchildren (which, in this economy, will be a long wait). You know what fills that time perfectly? 162 games of ball.</p>
+
+    <p>Fourth – Growing up, you know who liked baseball? Your dad. So, who do you think of when you watch baseball? Your dad. So when you get to be really old – to the point where you start, maybe not "yearning for", but certainly start to "look back on" your youth, what are you going to remember? You and your dad watching baseball. You're telling me that doesn't have more appeal than the Kings playing the Mavericks on NBA League Pass on Tuesday night?</p>
+
+    <p>Last point on this – The games are in the summer. You know what old people hate? The cold. You know the only sport that doesn't revolve around the cold? Baseball. An end of year game for your favorite football team? Below freezing. Your basketball team? The season starts in OCTOBER – you play in EVERY cold month! Hockey? See basketball. Baseball, however? Enjoy 6 months of commercial-free warm weather at your local ballpark. No one is dying in that.</p>
+
+    <p>I have massive amounts of respect for the NBA fans who continue to watch the league through this dark time in its history – those that watch because they still genuinely enjoy it, those that watch because they're fans through and through and have to stick it out, those that watch despite the pain that it is causing them, and those that watch because it is the only thing they know. I also appreciate the hockey fans spewing Canadian propaganda down our throats – that the stick and puck has somehow surpassed the stick and ball after one (1) electric cross-border clash. You fans – cheer on – I want to take nothing away from you. Just know that for the past 100 years and for the next 100, baseball will always be the NFL's sweet prince.</p>
+  </div>
+
+  <div class="article-footer">
+    <a href="../writing.html" class="back-link">← Back to writing</a>
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 Aidan McGowan</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/aidan-mcgowan-656474179/">LinkedIn</a>
+    <a href="https://x.com/mcgowanaidan_?s=21">Twitter</a>
+    <a href="mailto:aidanmcgowan2@gmail.com">Email</a>
+  </div>
+</footer>
+</body>
+</html>
