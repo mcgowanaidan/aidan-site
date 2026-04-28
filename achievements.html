@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements — Aidan McGowan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #111110; --ink-2: #555552; --ink-3: #999996;
+    --paper: #fafaf8; --paper-2: #f0f0ec; --accent: #c8502a;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 780px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--paper-2); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.85rem; font-weight: 400; color: var(--ink-2); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  .page-header {
+    padding: 10rem 2.5rem 5rem;
+    max-width: calc(var(--max) + 4rem);
+    margin: 0 auto;
+  }
+
+  .page-header h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--ink);
+    animation: fadeUp 0.6s 0.1s both;
+  }
+
+  .page-header h1 em { font-style: italic; color: var(--accent); }
+
+  .achievements-container {
+    max-width: calc(var(--max) + 4rem);
+    margin: 0 auto;
+    padding: 0 2.5rem 6rem;
+  }
+
+  /* OVERVIEW BLOCK */
+  .overview-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 2.5rem 0 3.5rem;
+    border-bottom: 1px solid var(--paper-2);
+    margin-bottom: 4rem;
+  }
+
+  .overview-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    padding-top: 0.2rem;
+  }
+
+  .overview-body h2 {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .overview-body p {
+    font-size: 0.98rem;
+    color: var(--ink-2);
+    line-height: 1.75;
+  }
+
+  /* ACHIEVEMENT CARDS */
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: var(--paper-2);
+    border: 1.5px solid var(--paper-2);
+  }
+
+  .achievement-card {
+    background: var(--paper);
+    padding: 2.25rem 2rem;
+    position: relative;
+    transition: background 0.15s;
+  }
+
+  .achievement-card:hover { background: #fff; }
+
+  .achievement-card.featured {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .card-date {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    font-size: 0.92rem;
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+
+  .card-stat {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .card-stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-outcome {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 1rem;
+    padding: 4px 10px;
+  }
+
+  .card-outcome.success {
+    color: #2a7a4a;
+    background: #eaf4ee;
+  }
+
+  .card-outcome.attempted {
+    color: #8a5a00;
+    background: #fdf3e0;
+  }
+
+  footer { border-top: 1px solid var(--paper-2); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  footer span { font-size: 0.82rem; color: var(--ink-3); }
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer a { font-size: 0.82rem; color: var(--ink-3); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; }
+    .page-header { padding: 7rem 1.25rem 3rem; }
+    .achievements-container { padding: 0 1.25rem 4rem; }
+    .overview-block { grid-template-columns: 1fr; gap: 1rem; }
+    .achievements-grid { grid-template-columns: 1fr; }
+    .achievement-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-name">Aidan McGowan</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="achievements.html" class="active">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>Things I've<br><em>done</em></h1>
+</div>
+
+<div class="achievements-container">
+
+  <!-- OVERVIEW -->
+  <div class="overview-block">
+    <p class="overview-label">Overview</p>
+    <div class="overview-body">
+      <h2>Outside the office, I like to do things that are mildly inadvisable.</h2>
+      <p>A running log of physical challenges, personal projects, and other things I've thrown myself at — some successfully, some not. More to come.</p>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="achievements-grid">
+
+    <div class="achievement-card featured">
+      <div>
+        <p class="card-date">May 2025</p>
+        <h3 class="card-title">Los Angeles to San Diego — on Rollerblades</h3>
+        <span class="card-outcome success">✓ Completed</span>
+      </div>
+      <div>
+        <span class="card-stat">~120</span>
+        <span class="card-stat-label">Miles on inline skates</span>
+        <p class="card-body">Strapped on a pair of rollerblades and covered the roughly 120 miles between LA and San Diego along the California coast. Add any detail here — how long it took, who came, what went wrong, what you'd do differently.</p>
+      </div>
+    </div>
+
+    <div class="achievement-card featured">
+      <div>
+        <p class="card-date">March 2026</p>
+        <h3 class="card-title">Key Largo to Key West — by Bike</h3>
+        <span class="card-outcome attempted">↻ Attempted</span>
+      </div>
+      <div>
+        <span class="card-stat">~110</span>
+        <span class="card-stat-label">Miles attempted</span>
+        <p class="card-body">Attempted to cycle the full length of the Florida Keys — from Key Largo down the Overseas Highway to Key West. Didn't make it all the way, but that's a story for another day. Add the detail here — how far you got, what happened, whether you'd try again.</p>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <p class="card-date">TBD</p>
+      <h3 class="card-title">Next challenge</h3>
+      <p class="card-body">Details to be added.</p>
+    </div>
+
+    <div class="achievement-card">
+      <p class="card-date">TBD</p>
+      <h3 class="card-title">And another</h3>
+      <p class="card-body">Details to be added.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 Aidan McGowan</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/aidan-mcgowan-656474179/">LinkedIn</a>
+    <a href="https://x.com/mcgowanaidan_?s=21">Twitter</a>
+    <a href="mailto:aidanmcgowan2@gmail.com">Email</a>
+  </div>
+</footer>
+</body>
+</html>
