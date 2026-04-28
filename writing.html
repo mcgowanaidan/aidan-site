@@ -164,7 +164,7 @@
 
   <div class="writing-list">
 
-    <a href="posts/corepower.html" class="writing-item">
+    <a href="posts/corepower.html" class="writing-item" data-category="Sports">
       <span class="writing-date">Mar 2026</span>
       <div class="writing-content">
         <h3 class="writing-title">CorePower, [solidcore], any form of Pilates – BAD!</h3>
@@ -173,7 +173,7 @@
       <span class="writing-tag">Sports</span>
     </a>
 
-    <a href="#" class="writing-item">
+    <a href="#" class="writing-item" data-category="">
       <span class="writing-date">Coming soon</span>
       <div class="writing-content">
         <h3 class="writing-title">More pieces on the way</h3>
@@ -196,10 +196,23 @@
 
 <script>
   const btns = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.writing-item');
+
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+
+      const filter = btn.textContent.trim();
+
+      items.forEach(item => {
+        const category = item.getAttribute('data-category');
+        if (filter === 'All' || category === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
     });
   });
 </script>
