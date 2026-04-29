@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Case Against (or for?) AI? — Aidan McGowan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #111110; --ink-2: #555552; --ink-3: #999996;
+    --paper: #fafaf8; --paper-2: #f0f0ec; --accent: #c8502a;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 680px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--paper-2); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.85rem; font-weight: 400; color: var(--ink-2); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  .article-header { max-width: calc(var(--max) + 4rem); margin: 0 auto; padding: 9rem 2.5rem 3rem; }
+  .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .article-tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .article-date { font-size: 0.78rem; color: var(--ink-3); letter-spacing: 0.04em; }
+  .article-meta-divider { width: 3px; height: 3px; background: var(--ink-3); border-radius: 50%; }
+  .article-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -0.03em; line-height: 1.1; color: var(--ink); animation: fadeUp 0.5s 0.1s both; }
+
+  .article-body { max-width: calc(var(--max) + 4rem); margin: 0 auto; padding: 0 2.5rem 6rem; }
+  .article-divider { border: none; border-top: 1px solid var(--paper-2); margin: 2.5rem 0; }
+  .article-content p { color: var(--ink-2); margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.02rem; }
+  .article-content p:last-child { margin-bottom: 0; }
+
+  .article-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--paper-2); display: flex; justify-content: space-between; align-items: center; }
+  .back-link { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.15s; }
+  .back-link:hover { color: var(--ink); }
+
+  footer { border-top: 1px solid var(--paper-2); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  footer span { font-size: 0.82rem; color: var(--ink-3); }
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer a { font-size: 0.82rem; color: var(--ink-3); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; }
+    .article-header { padding: 7rem 1.25rem 2.5rem; }
+    .article-body { padding: 0 1.25rem 4rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-name">Aidan McGowan</a>
+  <ul class="nav-links">
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../writing.html" class="active">Writing</a></li>
+    <li><a href="../speaking.html">Speaking</a></li>
+    <li><a href="../achievements.html">Achievements</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="article-header">
+  <div class="article-meta">
+    <span class="article-tag">Culture</span>
+    <span class="article-meta-divider"></span>
+    <span class="article-date">April 2025</span>
+  </div>
+  <h1>The Case Against (or for?) AI?</h1>
+</div>
+
+<div class="article-body">
+  <hr class="article-divider">
+
+  <div class="article-content">
+    <p>I'd like to apologize to my readers as I have been incredibly sporadic on the blog these days. Between my full-time job, my weekly podcast, my sports blog, this blog, calling my mom and dad once a week, and sending tweets to my 40 closest friends, you can say I have been a bit swamped. I wanted to hop back on the horse, so I asked ChatGPT to give me a list of 10 potential arguments to take side on. Ironically, one of them was "Is AI a bigger threat or opportunity for the job market?" Let's tackle.</p>
+
+    <p>As an investment banker, I use ChatGPT and AI every single day. Three years ago, as an intern, it was worth my time to sit at my desk for twenty minutes and figure out the complexities of an extended Excel formula. Today, I typed my problem into the chat box, and it spits it out with perfection. I have enough command that I can modify it as appropriate, but otherwise, there is no reason for me to expand my current formula fluency past what I already have. I don't think for a second that I am unique in this regard – investment bankers everywhere, as well as lawyers, doctors, and consultants I'm sure, do this same thing.</p>
+
+    <p>This usage of AI is good – while the AI is helping me, it is not sourcing my thoughts. I'm using the formula builder as a tool, but I am not asking the chat bot what I should be looking for – I tell it what I am looking for and it helps me. This is how we should be using it; human knowledge will always transcend past artificial. Even from reading this, you can tell a human wrote it – it feels natural, perhaps even crass – not robotic and canned. Using AI as a tool? Chaotic good.</p>
+
+    <p>The reason I title this "the case against" is because too many are using AI as a source of work rather than an addendum thereof. I realize the irony behind that statement as I used AI to brainstorm writing prompts, but that's nothing Google couldn't have done ten years ago – in other words, this usage isn't truly innovative. The problem will arise when profit-motivated corporations begin to lay off human capital because human capital costs more than artificial intelligence, and both managers and shareholders believe that artificial intelligence can do the job of a human just as – if not more – effectively.</p>
+
+    <p>I am going to ignore the fact that this is obviously not true – we all know human capital defeats artificial intelligence in a critical thinking and creativity contest 100 out of 100 times. The reason this is an irrational strategy for profit-maximizers is that in the long run, it isn't more profitable. In the short run, your quarter over quarter profits will blossom. Your noninterest expenses tumble while your noninterest income spikes. Your shareholders love you; your bosses are promoted; the sky is blue; the grass is green. This could last quarters, years, who knows how long.</p>
+
+    <p>But what happens when all these unskilled laborers are let go because AI can do their job? The unemployment rate creeps to 5, 8, 10%? The unemployed turn to cheaper, less expensive goods? They stop going to bars, stop attending private schools, stop buying homes, stop buying new clothes. The economy slows. The unemployment rate continues to rise while consumption continues to fall. Suddenly – a recession – a big one. One that has been looming since 2022. These corporations who laid off employees for artificial intelligence suddenly have no clients for whom to use artificial intelligence. The boss's boss is fired as he can no longer produce the quarter over quarter gains he could back in 2026. Investors sell off their shares, furious at the company's direction. Share prices plummet, the industry sector plummets, the stock market plummets. Roth IRAs, 401ks, and individual brokerages – those that have been accruing returns for 40+ years – wiped out in the "Artificial Recession".</p>
+
+    <p>This is why I despise QR code menus on the tables at bars. While seemingly miniscule, that is a steppingstone to eliminating jobs. We used to wait for the waitress to come to our table or go to the bar and order from the bartender like a man. Ordering and paying by phone cuts out one human interaction per day and propagates the continued narrative of efficiency and profit maximization that will one day lead to an economic demise. And when that demise comes, long after all are dead, there still will remain I, seated at the end of the bar, ordering from the bartender as God always intended.</p>
+  </div>
+
+  <div class="article-footer">
+    <a href="../writing.html" class="back-link">← Back to writing</a>
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 Aidan McGowan</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/aidan-mcgowan-656474179/">LinkedIn</a>
+    <a href="https://x.com/mcgowanaidan_?s=21">Twitter</a>
+    <a href="mailto:aidanmcgowan2@gmail.com">Email</a>
+  </div>
+</footer>
+</body>
+</html>
