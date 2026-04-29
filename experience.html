@@ -101,6 +101,41 @@
     line-height: 1.7;
   }
 
+  .exp-bullets {
+    margin-top: 0.75rem;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .exp-bullets li {
+    font-size: 0.92rem;
+    color: var(--ink-2);
+    line-height: 1.6;
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--ink-3);
+  }
+
+  .exp-bullets li.sub {
+    padding-left: 2.2rem;
+    font-size: 0.88rem;
+  }
+
+  .exp-bullets li.sub::before {
+    content: '○';
+    font-size: 0.6rem;
+    top: 0.25rem;
+  }
+
   .exp-tags {
     display: flex;
     flex-wrap: wrap;
@@ -164,8 +199,32 @@
       </div>
       <div class="exp-body">
         <h3>Investment Banking Analyst — Financial Institutions Group</h3>
-        <p>Recruited as a member of the first analyst class to build out Cantor's FIG division, launched Q4 2024. Sole depositories-focused analyst responsible for standardising slides, templates, and the merger model.</p>
-        <p>Select transactions include a ~$150MM debt and equity raise for a Canadian equipment finance originator (built 3-statement model for US, Canada, and consolidated entities; drafted teaser and CIM delivered to 100+ parties), a ~$125MM acquisition of a whole-bank's equipment finance subsidiary, and a ~$250MM forward flow partnership for a West Coast-based equipment finance lessor.</p>
+        <ul class="exp-bullets">
+          <li>Recruited as member of first analyst class to build out Cantor's FIG division that launched Q4 2024</li>
+          <li>Sole depositories-focused analyst responsible for standardizing slides &amp; templates and refining merger model</li>
+          <li>Select Transaction Experience:
+            <ul class="exp-bullets" style="margin-top:0.35rem;">
+              <li class="sub">Pending Transaction – ~$150MM Debt and Equity Raise for a Canadian Equipment Finance Originator
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Built originations and 3-statement model for US, Canada, and consolidated entities</li>
+                  <li class="sub">Drafted the teaser and CIM; oversaw delivery of both to 100+ parties</li>
+                  <li class="sub">Compared 5+ bids on junior debt and senior debt to allow management to pick a sponsor</li>
+                </ul>
+              </li>
+              <li class="sub">Active Engagement – ~$125MM Acquisition of a Whole-Bank's Equipment Finance Subsidiary
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Reviewed marketing materials and enhanced model to suggest purchase multiple; used analyses to draft LOI</li>
+                </ul>
+              </li>
+              <li class="sub">Active Engagement – ~$250MM Forward Flow Partnership for a West Coast-based Equipment Finance Lessor
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Coordinated day-to-day operations of the deal from engagement letter, NDA, data room management, etc.</li>
+                  <li class="sub">Led calls with client management to review diligence and investor trackers of 50+ potential sponsors</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
         <div class="exp-tags">
           <span class="tag">FIG</span>
           <span class="tag">Debt &amp; Equity Advisory</span>
@@ -188,8 +247,51 @@
       </div>
       <div class="exp-body">
         <h3>Investment Banking Analyst</h3>
-        <p>Depositories coverage with a focus on community banking M&amp;A across the southeast and central United States. Sole analyst responsible for all marketing materials production including webinars, banking conferences, and special alerts.</p>
-        <p>Select transactions include the $25MM sale of Johnson County Bank to Skyline Bankshares (OTCQX: SLBK), sale of New Millennium Bankshares to Berco Inc., sale of Bancshares of Ripley to Security Bancshares, acquisition of KANZA Financial by PBT Bancshares, acquisition of Fidelity Kansas Bankshares by Heritage Bancshares, sale of First Minnetonka Bancorporation to Bridgewater Bancshares (NASDAQCM: BWB), sale of The Magnolia State Corporation to BankFirst Capital (OTCQX: BFCC), and sale of Enevoldsen Management to Platte Valley Financial Services.</p>
+        <ul class="exp-bullets">
+          <li>Depositories coverage team with a focus on community banking M&amp;A across the southeast &amp; central United States</li>
+          <li>Sole analyst overseeing marketing materials production for webinars, banking conferences, and special alerts</li>
+          <li>Select Transaction Experience:
+            <ul class="exp-bullets" style="margin-top:0.35rem;">
+              <li class="sub">$25MM Sale of Johnson County Bank to Skyline Bankshares, Inc. (OTCQX: SLBK)
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Performed ability-to-pay analysis of potential bidders to estimate projected offers in the pre-marketing period</li>
+                  <li class="sub">Projected target's financial performance to evaluate pricing multiples at close</li>
+                </ul>
+              </li>
+              <li class="sub">Sale of New Millennium Bankshares, Inc. to Berco, Inc.
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Created templated cost savings analysis for the benefit of potential acquirers</li>
+                  <li class="sub">Calculated 5+ offer values after transaction expenses and taxes to recommend counterparties for diligence</li>
+                </ul>
+              </li>
+              <li class="sub">Sale of Bancshares of Ripley, Inc. to Security Bancshares, Inc.
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Modeled the pro forma entity at close in the event of a securities portfolio churn to reduce AOCI concerns</li>
+                  <li class="sub">Rendered the fairness opinion of and produced the proxy insert for the transaction</li>
+                </ul>
+              </li>
+              <li class="sub">Acquisition of KANZA Financial Corporation by PBT Bancshares, Inc.
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Reviewed recent loan analysis to recommend formal list of loan detail to review in second round diligence</li>
+                  <li class="sub">Estimated termination costs of 15+ material contracts and their effect on purchase price</li>
+                </ul>
+              </li>
+              <li class="sub">Acquisition of Fidelity Kansas Bankshares, Inc. by Heritage Bancshares, Inc.
+                <ul class="exp-bullets" style="margin-top:0.25rem;">
+                  <li class="sub">Modeled 10+ potential buyers in hypothetical transactions to estimate competitors' ability-to-pay</li>
+                  <li class="sub">Valued the largest customer relationship and impact to deal value in case of deposit runoff using DCF analysis</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Additional Transactions:
+            <ul class="exp-bullets" style="margin-top:0.35rem;">
+              <li class="sub">Sale of First Minnetonka Bancorporation, Inc. to Bridgewater Bancshares, Inc. (NASDAQCM: BWB)</li>
+              <li class="sub">Sale of The Magnolia State Corporation to BankFirst Capital Corporation (OTCQX: BFCC)</li>
+              <li class="sub">Sale of Enevoldsen Management Company to Platte Valley Financial Services Companies</li>
+            </ul>
+          </li>
+        </ul>
         <div class="exp-tags">
           <span class="tag">M&amp;A Advisory</span>
           <span class="tag">Community Banking</span>
@@ -266,6 +368,15 @@
         <p class="exp-detail">Best Feature Writing, Intercollegiate Studies Institute (2022) &nbsp;·&nbsp; Eagle Scout, Boy Scouts of America (2018)</p>
       </div>
     </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">Interests</p>
+      </div>
+      <div class="exp-body">
+        <p class="exp-detail">Boxing &nbsp;·&nbsp; Swimming &nbsp;·&nbsp; Thriller Books &nbsp;·&nbsp; Country Music &nbsp;·&nbsp; Action Movies &nbsp;·&nbsp; U.S. Politics &nbsp;·&nbsp; Cooking</p>
+      </div>
+    </div>
   </div>
 
   <div class="exp-group">
@@ -274,7 +385,20 @@
     <div class="exp-item">
       <div class="exp-meta">
         <p class="exp-date">TBD</p>
-        <p class="exp-org"></p>
+      </div>
+      <div class="exp-body">
+        <h3>Coming soon</h3>
+        <p>Details to be added.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-group">
+    <p class="exp-section-title">Lore</p>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <p class="exp-date">TBD</p>
       </div>
       <div class="exp-body">
         <h3>Coming soon</h3>
