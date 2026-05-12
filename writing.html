@@ -248,6 +248,16 @@
 
 
   </div>
+
+  <div id="college-strip" style="margin-top: 2rem; border: 1.5px solid var(--paper-2); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; background: var(--paper);">
+    <div>
+      <p style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 0.3rem;">From the archive</p>
+      <p style="font-family: var(--serif); font-size: 1.05rem; color: var(--ink); letter-spacing: -0.01em;">Writing from college</p>
+      <p style="font-size: 0.82rem; color: var(--ink-3); margin-top: 0.2rem;">The Jefferson Independent · University of Virginia</p>
+    </div>
+    <a href="https://jeffersonindependent.com/author/aidan-mcgowan/" target="_blank" style="font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1.5px solid var(--ink); padding-bottom: 2px; white-space: nowrap;">Read the archive →</a>
+  </div>
+
 </div>
 
 <footer>
@@ -262,6 +272,7 @@
 <script>
   const btns = document.querySelectorAll('.filter-btn');
   const items = document.querySelectorAll('.writing-item');
+  const strip = document.getElementById('college-strip');
 
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -278,6 +289,8 @@
           item.style.display = 'none';
         }
       });
+
+      strip.style.display = filter === 'All' ? '' : 'none';
     });
   });
 </script>
