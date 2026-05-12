@@ -61,9 +61,9 @@
 
   /* PERSON OF THE YEAR */
   .poty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--paper-2); border: 1.5px solid var(--paper-2); margin-bottom: 2rem; }
-  .poty-winner { grid-column: 1 / -1; background: var(--ink); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; }
-  .poty-winner-name { font-family: var(--serif); font-size: 2rem; color: #fff; letter-spacing: -0.02em; }
-  .poty-winner-year { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .poty-winner { grid-column: 1 / -1; background: var(--paper-2); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--accent); }
+  .poty-winner-name { font-family: var(--serif); font-size: 2rem; color: var(--ink); letter-spacing: -0.02em; }
+  .poty-winner-year { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
   .poty-winner-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 0.3rem; }
   .poty-candidate { background: var(--paper); padding: 1.25rem 1.5rem; }
   .poty-candidate-name { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); letter-spacing: -0.01em; }
@@ -114,35 +114,51 @@
 
     <div class="tier-row">
       <div class="tier-label t-rushmore">Mount Rushmore</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Top Gun: Maverick</span><span class="film-tag">Whiplash</span><span class="film-tag">Shawshank Redemption</span><span class="film-tag">Cars</span><span class="film-tag">Fight Club</span><span class="film-tag">Pirates of the Caribbean (Black Pearl)</span><span class="film-tag">The Departed</span><span class="film-tag">Side Effects</span><span class="film-tag">Primal Fear</span><span class="film-tag">Ford v Ferrari</span><span class="film-tag">Ricky Stanicky</span><span class="film-tag">The Prestige</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-amazing">Amazing</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Seven</span><span class="film-tag">Prisoners</span><span class="film-tag">Titanic</span><span class="film-tag">Now You See Me</span><span class="film-tag">Bourne Identity</span><span class="film-tag">Bourne Supremacy</span><span class="film-tag">Bourne Ultimatum</span><span class="film-tag">Gladiator</span><span class="film-tag">Love and Other Drugs</span><span class="film-tag">Limitless</span><span class="film-tag">Sully</span><span class="film-tag">Forgetting Sarah Marshall</span><span class="film-tag">Baby Driver</span><span class="film-tag">Rounders</span><span class="film-tag">Captain Phillips</span><span class="film-tag">LA Confidential</span><span class="film-tag">The Town</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-reallygood">Really Good</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">GoodFellas</span><span class="film-tag">Hacksaw Ridge</span><span class="film-tag">The Dark Knight</span><span class="film-tag">Shutter Island</span><span class="film-tag">Sixth Sense</span><span class="film-tag">The Woman in Cabin 10</span><span class="film-tag">Marty Supreme</span><span class="film-tag">A Complete Unknown</span><span class="film-tag">Crazy Stupid Love</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-good">Good</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Silence of the Lambs</span><span class="film-tag">The Social Network</span><span class="film-tag">Zodiac</span><span class="film-tag">Weapons</span><span class="film-tag">Nightcrawler</span><span class="film-tag">Dead Poets Society</span><span class="film-tag">Catch Me If You Can</span><span class="film-tag">Casino</span><span class="film-tag">The Fugitive</span><span class="film-tag">Enemy</span><span class="film-tag">La La Land</span><span class="film-tag">Django</span><span class="film-tag">Brothers</span><span class="film-tag">Inception</span><span class="film-tag">Mr. and Mrs. Smith</span><span class="film-tag">The Matrix</span><span class="film-tag">Predestination</span><span class="film-tag">Usual Suspects</span><span class="film-tag">Heat</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-fine">Fine</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Sicario</span><span class="film-tag">Zero Dark Thirty</span><span class="film-tag">Road House</span><span class="film-tag">The Nice Guys</span><span class="film-tag">Good Will Hunting</span><span class="film-tag">28 Years Later</span><span class="film-tag">When Harry Met Sally</span><span class="film-tag">Boiler Room</span><span class="film-tag">Dodgeball</span><span class="film-tag">Troy</span><span class="film-tag">Saving Private Ryan</span><span class="film-tag">The Godfather</span><span class="film-tag">12 Angry Men</span><span class="film-tag">The Woman in the Yard</span><span class="film-tag">Ad Astra</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-underwhelming">Underwhelming</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Memento</span><span class="film-tag">Wake Up Dead Man: Knives Out</span><span class="film-tag">Sinners</span><span class="film-tag">Cabin in the Woods</span><span class="film-tag">Fargo</span><span class="film-tag">Pulp Fiction</span><span class="film-tag">No Country for Old Men</span><span class="film-tag">25th Hour</span><span class="film-tag">American History X</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-notgood">Not Good</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Knives Out: Glass Onion</span><span class="film-tag">Margin Call</span><span class="film-tag">Inglourious Basterds</span><span class="film-tag">Tombstone</span><span class="film-tag">The Stanford Prison Experiment</span><span class="film-tag">Twilight</span><span class="film-tag">Once Upon a Time in Hollywood</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-trash">Trash</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">The People We Meet on Vacation</span><span class="film-tag">300</span><span class="film-tag">Swingers</span><span class="film-tag">Breakfast Club</span><span class="film-tag">Taxi Driver</span><span class="film-tag">Tenet</span><span class="film-tag">Nine Days</span><span class="film-tag">A House of Dynamite</span>
+      </div>
     </div>
   </div>
 
@@ -152,19 +168,27 @@
 
     <div class="tier-row">
       <div class="tier-label t-awesome">Awesome</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">The Only One Left</span><span class="film-tag">The Housemaid</span><span class="film-tag">The Silent Patient</span><span class="film-tag">My Husband's Wife</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-bookgood">Good</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">The Housemaid's Secret</span><span class="film-tag">102 Minutes</span><span class="film-tag">Then She Was Gone</span><span class="film-tag">The Crash</span><span class="film-tag">The Surrogate Mother</span><span class="film-tag">Hidden Pictures</span><span class="film-tag">The Boyfriend</span><span class="film-tag">Ward D</span><span class="film-tag">The Four Agreements</span><span class="film-tag">The Housemaid is Watching</span><span class="film-tag">The Tenant</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-mid">Mid</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Verity</span><span class="film-tag">Fight Club</span><span class="film-tag">And Then There Were None</span><span class="film-tag">The Orphanage the Lake</span><span class="film-tag">Rita Hayworth and Shawshank Redemption</span>
+      </div>
     </div>
     <div class="tier-row">
       <div class="tier-label t-bad">Bad</div>
-      <div class="tier-content empty">Coming soon</div>
+      <div class="tier-content">
+        <span class="film-tag">Trust</span><span class="film-tag">Beautiful Ugly</span><span class="film-tag">The Fury</span><span class="film-tag">Dark Matter</span><span class="film-tag">Nuclear War: A Scenario</span><span class="film-tag">The Great Divorce</span><span class="film-tag">Never Lie</span><span class="film-tag">Five Little Pigs</span><span class="film-tag">The Perfect Marriage</span>
+      </div>
     </div>
   </div>
 
