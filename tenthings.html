@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Things — Aidan McGowan</title>
+<meta name="description" content="10 things Aidan McGowan likes and 10 things he doesn't. Every month.">
+<meta name="author" content="Aidan McGowan">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #111110; --ink-2: #555552; --ink-3: #999996; --paper: #fafaf8; --paper-2: #f0f0ec; --accent: #c8502a; --serif: 'DM Serif Display', Georgia, serif; --sans: 'DM Sans', system-ui, sans-serif; --max: 780px; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--paper-2); }
+  .nav-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.85rem; font-weight: 400; color: var(--ink-2); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  .page-header { padding: 10rem 2.5rem 3rem; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  .page-header h1 { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 4.5rem); letter-spacing: -0.03em; line-height: 1.05; color: var(--ink); animation: fadeUp 0.6s 0.1s both; }
+  .page-header h1 em { font-style: italic; color: var(--accent); }
+  .page-header p { margin-top: 0.75rem; font-size: 0.9rem; color: var(--ink-3); }
+
+  .container { max-width: calc(var(--max) + 4rem); margin: 0 auto; padding: 0 2.5rem 6rem; }
+
+  .entry { margin-bottom: 5rem; }
+  .entry-divider { border: none; border-top: 1px solid var(--paper-2); margin-bottom: 5rem; }
+
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 1.5px solid var(--ink); }
+  .entry-month { font-family: var(--serif); font-size: 1.5rem; letter-spacing: -0.02em; color: var(--ink); }
+  .entry-vol { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+  .col-header { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.75rem; color: var(--ink-3); }
+
+  .thing-list { list-style: none; padding: 0; margin: 0; }
+  .thing-item { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.55rem 0; border-bottom: 0.5px solid var(--paper-2); }
+  .thing-item:last-child { border-bottom: none; }
+  .thing-num { font-size: 0.75rem; color: var(--ink-3); min-width: 18px; flex-shrink: 0; }
+  .thing-text { font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
+
+  footer { border-top: 1px solid var(--paper-2); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; max-width: calc(var(--max) + 4rem); margin: 0 auto; }
+  footer span { font-size: 0.82rem; color: var(--ink-3); }
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer a { font-size: 0.82rem; color: var(--ink-3); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; }
+    .page-header { padding: 7rem 1.25rem 2.5rem; }
+    .container { padding: 0 1.25rem 4rem; }
+    .two-col { grid-template-columns: 1fr; gap: 2rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-name">Aidan McGowan</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="rankings.html">Rankings</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="tenthings.html" class="active">10 Things</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>10 <em>Things</em></h1>
+  <p>10 things I like and 10 things I don't.</p>
+</div>
+
+<div class="container">
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-month">Vol. 1</span>
+      <span class="entry-vol"></span>
+    </div>
+    <div class="two-col">
+      <div>
+        <p class="col-header">Yes</p>
+        <ul class="thing-list">
+          <li class="thing-item"><span class="thing-num">1.</span><span class="thing-text">2-Point Conversions</span></li>
+          <li class="thing-item"><span class="thing-num">2.</span><span class="thing-text">Spanish</span></li>
+          <li class="thing-item"><span class="thing-num">3.</span><span class="thing-text">The Pyramids</span></li>
+          <li class="thing-item"><span class="thing-num">4.</span><span class="thing-text">Bagels</span></li>
+          <li class="thing-item"><span class="thing-num">5.</span><span class="thing-text">Paychecks after your 401k is maxed</span></li>
+          <li class="thing-item"><span class="thing-num">6.</span><span class="thing-text">Mouthguards</span></li>
+          <li class="thing-item"><span class="thing-num">7.</span><span class="thing-text">Wii Golf</span></li>
+          <li class="thing-item"><span class="thing-num">8.</span><span class="thing-text">Christmas</span></li>
+          <li class="thing-item"><span class="thing-num">9.</span><span class="thing-text">Book clubs</span></li>
+          <li class="thing-item"><span class="thing-num">10.</span><span class="thing-text">Sunny and 75</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="col-header">No</p>
+        <ul class="thing-list">
+          <li class="thing-item"><span class="thing-num">1.</span><span class="thing-text">First job after college</span></li>
+          <li class="thing-item"><span class="thing-num">2.</span><span class="thing-text">Cohabitation</span></li>
+          <li class="thing-item"><span class="thing-num">3.</span><span class="thing-text">Venoming requesting less than $20</span></li>
+          <li class="thing-item"><span class="thing-num">4.</span><span class="thing-text">Unpolarized sunglasses</span></li>
+          <li class="thing-item"><span class="thing-num">5.</span><span class="thing-text">Traffic</span></li>
+          <li class="thing-item"><span class="thing-num">6.</span><span class="thing-text">Wet socks</span></li>
+          <li class="thing-item"><span class="thing-num">7.</span><span class="thing-text">Expensive mirrors</span></li>
+          <li class="thing-item"><span class="thing-num">8.</span><span class="thing-text">Surgery</span></li>
+          <li class="thing-item"><span class="thing-num">9.</span><span class="thing-text">Unemployment</span></li>
+          <li class="thing-item"><span class="thing-num">10.</span><span class="thing-text">Genocide</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="entry-divider">
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-month">Vol. 2</span>
+      <span class="entry-vol"></span>
+    </div>
+    <div class="two-col">
+      <div>
+        <p class="col-header">Yes</p>
+        <ul class="thing-list">
+          <li class="thing-item"><span class="thing-num">1.</span><span class="thing-text">Hot yoga</span></li>
+          <li class="thing-item"><span class="thing-num">2.</span><span class="thing-text">Catholicism</span></li>
+          <li class="thing-item"><span class="thing-num">3.</span><span class="thing-text">Social gatherings with alcohol</span></li>
+          <li class="thing-item"><span class="thing-num">4.</span><span class="thing-text">Meeting your neighbors</span></li>
+          <li class="thing-item"><span class="thing-num">5.</span><span class="thing-text">Bridges</span></li>
+          <li class="thing-item"><span class="thing-num">6.</span><span class="thing-text">Levain Bakery</span></li>
+          <li class="thing-item"><span class="thing-num">7.</span><span class="thing-text">Shawshank Redemption</span></li>
+          <li class="thing-item"><span class="thing-num">8.</span><span class="thing-text">Chick Fil A</span></li>
+          <li class="thing-item"><span class="thing-num">9.</span><span class="thing-text">Credit card rewards points</span></li>
+          <li class="thing-item"><span class="thing-num">10.</span><span class="thing-text">Convertibles</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="col-header">No</p>
+        <ul class="thing-list">
+          <li class="thing-item"><span class="thing-num">1.</span><span class="thing-text">Livestreamed death penalties</span></li>
+          <li class="thing-item"><span class="thing-num">2.</span><span class="thing-text">Interviewing for a new job</span></li>
+          <li class="thing-item"><span class="thing-num">3.</span><span class="thing-text">Car crashes</span></li>
+          <li class="thing-item"><span class="thing-num">4.</span><span class="thing-text">Yellow</span></li>
+          <li class="thing-item"><span class="thing-num">5.</span><span class="thing-text">Red pens</span></li>
+          <li class="thing-item"><span class="thing-num">6.</span><span class="thing-text">Braces</span></li>
+          <li class="thing-item"><span class="thing-num">7.</span><span class="thing-text">Knee pain</span></li>
+          <li class="thing-item"><span class="thing-num">8.</span><span class="thing-text">Waking up in the middle of the night</span></li>
+          <li class="thing-item"><span class="thing-num">9.</span><span class="thing-text">Vegetables</span></li>
+          <li class="thing-item"><span class="thing-num">10.</span><span class="thing-text">Getting a shot as a kid</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 Aidan McGowan</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/aidan-mcgowan-656474179/">LinkedIn</a>
+    <a href="https://x.com/mcgowanaidan_?s=21">Twitter</a>
+    <a href="mailto:aidanmcgowan2@gmail.com">Email</a>
+  </div>
+</footer>
+</body>
+</html>
